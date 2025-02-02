@@ -1,4 +1,14 @@
 <?php
+session_start(); // Inisialisasi Session
+// Ambil notifikasi jika ada, kemudian hapus dari sesi
+$notification = $_SESSION['notification'] ?? null;
+if ($notification) {
+  unset($_SESSION['notification']);
+}
+
+?>
+
+<?php
 // Memasukkan file konfigurasi database
 include 'config.php';
 // Memasukkan file init session
