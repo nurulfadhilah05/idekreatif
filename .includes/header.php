@@ -24,6 +24,8 @@ include "init_session.php";
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet"
+    href="https://cdn.datatables.net/2.2.1/css/dataTables.bootsrap5.min.css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
@@ -31,7 +33,8 @@ include "init_session.php";
 
     <title>Dashboard &mdash; IdeKreatif</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon"
+    href="assets/img/favicon/favicon.ico" />
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/vendor/fonts/boxicons.css" />
@@ -53,7 +56,7 @@ include "init_session.php";
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="assets/js/config.js"></script>
   </head>
-  <body>
+  <body>  
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
