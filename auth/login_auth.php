@@ -7,12 +7,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     $sql = "SELECT * FROM user WHERE username='$username'";
-    $result = $coon->query($sql);
+    $result = $conn->query($sql);
 
     if (result->num_rows > 0) {
         $row = $result->fetch_assoc();
         // Verifikasi password
-        if (password_verify($password,$row["password"])) {
+        if (password_verify($password, $row["password"])) {
             $_SESSION["username"] = $username;
             $_SESSION["name"] = $row["name"];
             $_SESSION["role"] = $row["role"];
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['notification'] = [
                 'type' => 'primary',
                 'message' => 'Selamat Datang Kembali!'
-            ];
+            ];  
             // Redirect ke dashboard
             header('location:../dashboard.php');
             exit();
